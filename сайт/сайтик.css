@@ -1,0 +1,847 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+      font-family: "Montserrat", sans-serif;
+      background-color: rgba(214, 210, 210, 1)
+
+}
+
+a{
+    color: rgba(44, 39, 36, 0.79);
+    text-decoration: none;
+   
+
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin: 0;
+
+}
+
+.container{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+
+.btn {
+  margin-left: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 165px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: rgba(221, 194, 200, 1);
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+/* Шапка */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+ 
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.header_logo{
+  max-height: 50px;
+  margin-right: 50px;  
+  /* размер лого и отступ справа от кнопок */
+}
+
+.header_information {
+  max-height: 25px;
+  margin-left: 25px;
+  opacity: 0.7;
+}
+
+.header_nav{
+  margin-left: auto;
+}
+
+.header_list{
+    display: flex;
+    gap: 30px;
+}
+
+.header_nav a {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.header_nav a.active{
+    font-size: 14px;
+    opacity: 1;
+}
+
+/* Приветственная секция */
+.welcome {
+    background-image: url("./images/welcome_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 240px;
+    color: white;
+    text-align: center;
+}
+
+.welcome .text{
+    width: 550px;
+}
+
+.welcome_subtitle{
+    font-size: 14px;
+    letter-spacing: 0.1em;
+
+    margin-bottom: 7px;
+}
+
+.welcome_title{
+    font-size: 58px;
+}
+
+.welcome_desc {
+    margin: 40px 0;
+    font-size: 18px;
+    opacity: 0.7;
+
+}
+
+.welcome_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 165px;
+  height: 50px;
+
+  font-weight: 500;
+  font-size: 16px;
+
+  color: white; 
+  background-color: rgba(211, 211, 211, 0.5); 
+  border: 2px solid white;
+  
+
+/* форма кнопки */
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* изменение кнопки когда наводишь курсор */
+.welcome_btn:hover {
+  background-color: white; 
+  color: black; 
+}
+
+/* Карточки с букетами, наборами, подпиской */
+
+.welcome-list {
+  background-color: white; 
+  padding: 30px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(44, 39, 36, 0.79) 
+}
+
+.welcome-list .container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px; /* расстояние между карточками */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.welcome-list_card {
+  flex: 1 1 300px; 
+  text-align: center;
+
+}
+
+.welcome-list_title {
+  font-size: 24px;
+  font-weight: 350px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.welcome-list_card img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.welcome-list_card:hover img {
+  transform: scale(1.05); /* увеличение при наведении */
+}
+
+.welcome-list_text {
+    font-size: 18px;
+    text-align: left;
+
+}
+
+.welcome-list_btn {
+  cursor: pointer; /* кликабельная кнопка*/  
+  font-weight: 650;
+  
+}
+
+/* Информационная секция */
+
+.footer {
+ background-color: white;
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+ padding: 150px 20px;
+}
+
+.footer_logo {
+  flex: 0 0 auto; /* не сжимается и не растет */
+  max-width: 180px;
+}
+
+.footer_logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-title {
+ color: rgba(106, 98, 98, 1);
+ font-size: 22px;
+ align-items: flex-end;
+
+}
+
+.footer_social_media {
+  margin-top: 20px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.footer_social_media a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer_social_media a:hover {
+  transform: scale(1.1);
+}
+
+.footer_social_media img {
+  width: 36px;   /* размер иконок */
+  height: 36px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.footer_bottom {
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  padding: 15px 20px 40px;
+  
+}
+
+.footer_bottom p {
+  margin: 6px 0;
+}
+
+.footer_link {
+  color: white;
+  
+}
+
+/* Каталог */
+
+.catalog {
+  background-color: white; 
+  padding: 30px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(44, 39, 36, 0.79) 
+}
+
+.catalog .container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px; /* расстояние между карточками */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.catalog_card {
+  flex: 1 1 300px; 
+  text-align: center;
+}
+
+.catalog_subtitle {
+  padding: 10px 0px;
+}
+
+.catalog_card_title {
+  font-size: 24px;
+  font-weight: 350px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.catalog_card img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.catalog_card:hover img {
+  transform: scale(1.05); /* увеличение при наведении */
+}
+
+.catalog_text {
+    font-size: 18px;
+    text-align: left;
+
+}
+
+.catalog_btn {
+  cursor: pointer; /* кликабельная кнопка*/  
+  font-weight: 650;
+  
+}
+
+/* Акции */
+
+.sales{
+  background-color: white; 
+  padding: 30px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(44, 39, 36, 0.79) 
+}
+
+.sales_card .container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  gap: 25px; /* расстояние между карточками */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sales_card_subtitle {
+
+}
+
+.sales_card_btn {
+  cursor: pointer; /* кликабельная кнопка*/  
+  font-weight: 650;
+}
+
+/* Описание к акциям */
+
+ .sales {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+ 
+}
+
+.sales_container {
+  display: flex;
+  gap: 200px;  /* расстояние между фото и описанием*/
+  align-items: flex-start;
+
+  max-width: 900px;    
+  margin-left: auto;   
+  margin-right: auto; 
+}
+
+.sales_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*  картинку и текст в центр*/
+  gap: 10px;
+}
+
+.sales_card img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  
+}
+
+.sales_card img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.sales_description {
+  font-size: 20px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.sales_description_list {
+  list-style-type: disc; /* стандартные точки */
+  padding-left: 20px; /* отступ слева */
+}
+
+/* Часть с партнерами */
+
+.partners {
+  background-color: white;
+  padding: 60px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(44, 39, 36, 0.79);
+}
+
+.partners_list {
+  padding-left: 190px; /* отступ слева */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px; 
+  line-height: 1.8;
+  font-weight: 550;
+ 
+}
+
+.partners_desc {
+  margin: 40px 20px;
+  padding: 0 15px;
+  text-align: left;
+}
+
+.partners_subtitle {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: rgba(44, 39, 36, 0.79);
+}
+
+.partners_text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(44, 39, 36, 0.7);
+  margin-bottom: 40px;
+}
+
+
+.partners_photos {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* расстояние между фото */
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 0 15px;
+}
+
+.partners_card {
+  width: 300px;
+  height: 300px;
+ 
+}
+
+.partners_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* сохраняет пропорции, остальное обрезается */
+  display: block; /* будет блочным элементом */
+}
+
+.partners_btn {
+  text-align:  center;
+}
+ 
+.partners_description_list {
+  list-style-type: disc; 
+  padding-left: 20px; /* отступ слева */
+}
+
+/* Форма */
+.order {
+  background-color: white; 
+  padding: 30px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(44, 39, 36, 0.79);
+  display: flex;
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+}
+
+h3, h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  
+}
+
+.order_section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1.5px solid #aaa; /* серый цвет границ */
+  border-radius: 6px;       /* скругленные углы */
+  color: #999;              /* светло-серый цвет текста */
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: #666;
+  outline: none;
+  color: #333; /* при фокусе цвет текста темнее */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.1);
+  vertical-align: middle;
+}
+
+label > input[type="radio"], 
+label > input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.order_btn {
+  text-align: center;
+  margin-top: 20px;
+  background-color: white;
+}
+
+#send-btn {
+  font-size: 16px;
+  padding: 12px 30px;
+  border-radius: 6px;
+  background-color: rgba(106, 98, 98, 1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Таблица */
+
+.information {
+  background-color: white;
+  padding: 60px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(44, 39, 36, 0.79);
+  
+}
+
+.info_header {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.info_table {
+  margin: 0 auto;
+  width: 700px;
+  border-spacing: 0;
+  border: 1px solid rgba(44, 39, 36, 0.79);
+  border-collapse: collapse;
+  background-image: url("./images/таблица_обои.jfif");
+
+}
+
+.info_table th, .info_table td {
+  padding: 10px;
+  
+}
+
+.logo_information {
+  width: 55px;
+  height: 55px;
+}
+
+
+.photo_collection_section {
+  background-color: white;
+  padding: 60px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(44, 39, 36, 0.79);
+}
+
+.photo_collection {
+  width: 600px;
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;;
+  padding: 40px;
+}
+
+.collection_desc {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ПАСПОРТ */
+
+.passport_section {
+  background-color: white;
+  padding: 60px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(44, 39, 36, 0.79);
+  text-align: center; 
+  margin-bottom: 0;
+}
+
+.passport_part {
+  position: relative;
+  display: inline-block; 
+  margin: 0 auto;
+  
+}
+
+.passport_photo {
+  max-width: 100%;
+  display: block; 
+  margin: 0 auto; 
+}
+
+.passport_desc_1 {
+  position: absolute;
+  top: 50px; 
+  left: 90px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.passport_desc_2 {
+   position: absolute;
+  top: 130px; 
+  left: 90px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.passport_desc_3 {
+  position: absolute;
+  top: 130px; 
+  left: 300px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.signature {
+  position: absolute;
+  top: 190px; 
+  left: 30px; 
+  width: 230px;
+  height: 100px;
+
+}
+
+.my_signature {
+  position: absolute;
+  top: 190px; 
+  left: 300px; 
+  width: 150px;
+  height: 90px;
+}
+
+.passport_desc_4 {
+  position: absolute;
+  top: 360px; 
+  left: 250px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.passport_desc_5 {
+  position: absolute;
+  top: 410px; 
+  left: 250px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.passport_desc_6 {
+  position: absolute;
+  top: 435px; 
+  left: 250px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.passport_desc_7 {
+  position: absolute;
+  top: 465px; 
+  left: 190px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.passport_desc_8 {
+  position: absolute;
+  top: 465px; 
+  left: 300px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.passport_desc_9 {
+  position: absolute;
+  top: 485px; 
+  left: 250px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.passport_desc_10 {
+  position: absolute;
+  top: 510px; 
+  left: 200px; 
+  color: rgba(44, 39, 36, 0.79);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.my_photo {
+  width: 135px;
+  height: 170px;
+  position: absolute;
+  top: 400px; 
+  left: 20px; 
+
+}
+
+.passport_btn_section{
+  
+ padding: 40px;
+
+}
+
+.passport_btn {
+  width: 165px;
+  height: 50px;
+
+  font-weight: 500;
+  font-size: 16px;
+
+  color: rgba(213, 94, 135, 1);
+  background-color: rgba(252, 201, 219, 1); 
+  border: 2px solid rgba(213, 94, 135, 1);
+  border-radius: 25px;
+}
+
+.dom_photo {
+  width:700;
+  height: 700px;
+}
+
+/* задача */
+
+.task_section {
+   background-color: white;
+  padding: 60px 10px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(44, 39, 36, 0.79);
+  text-align: center; 
+  margin-bottom: 0;
+}
+
+.task_desc {
+  text-align: center;
+}
+
+.btn_task {
+  width: 165px;
+  height: 50px;
+
+  font-weight: 500;
+  font-size: 16px;
+
+  color: rgba(213, 94, 135, 1);
+  background-color: rgba(252, 201, 219, 1); 
+  border: 2px solid rgba(213, 94, 135, 1);
+  border-radius: 25px;
+  margin-top: 35px;
+  
+}
+
+
+
+
+
+
+
+
+
+

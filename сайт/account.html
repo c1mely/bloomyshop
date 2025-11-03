@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Партнеры</title>
+    <link rel="stylesheet" href="сайтик.css">
+</head>
+
+<!-- Шапка -->
+
+<body>
+    <header class="header">
+        <div class="container">
+             <a href="task.html"><img src="./images/logo.png" alt="Логотип"  class="header_logo"> </a> 
+
+        <nav class="header_nav">
+            <ul class="header_list">
+                <li><a href="index.html">ГЛАВНАЯ</a></li>
+                <li><a href="catalog.html">КАТАЛОГ</a></li>
+                <li><a href="sales.html">АКЦИИ</a></li>
+                <li><a href="partners.html">ПАРТНЕРЫ</a></li>
+                <li><a href="https://yandex.ru/maps/2/saint-petersburg/house/nevskiy_prospekt_85/Z0kYdQFiSUMPQFtjfXVycX1nYg==/?ll=30.362069%2C59.930147&z=16" target="_blank"> РАСПОЛОЖЕНИЕ</a></li>
+                <li><a href="sales.html#shop_information">О НАС</a></li>
+                <li><a href="order.html">ЗАКАЗ</a></li>
+                <li><a class="active" href="account.html"> АККАУНТ </a></li>
+            </ul>
+        </nav>
+         <a href="information.html"><img src="./images/mini_info.png" title="краткая информация" alt ="information" class ="header_information"></a>
+        </div>
+    </header>
+
+    <!-- Основная часть -->
+
+    <main class="main">
+        <section class="passport_section">
+
+            <h4> ИЗМЕНЯЕМ КИРИЛЛИЦУ НА ЛАТИНИЦУ ПО КЛИКУ </h4>
+
+            <div class="passport_part">
+
+            <p class="passport_desc_1"> УМВД РОССИИ ПО БЕЛГОРОДСКОЙ ОБЛАСТИ</p>
+            
+            <p class="passport_desc_2"> 30.12.2020 </p>
+
+            <p class="passport_desc_3"> 310-005 </p>
+
+            <img class="signature" src="./images/подпись.png"> 
+
+            <img class="my_signature" src="./images/моя_подпись.png">
+
+            <p class="passport_desc_4"> ХВОСТОВА </p>
+
+            <p class="passport_desc_5"> СВЕТЛАНА </p>
+
+            <p class="passport_desc_6"> РОМАНОВНА </p>
+
+            <p class="passport_desc_7"> ЖЕН. </p>
+
+            <p class="passport_desc_8">  04.12.2006 </p>
+
+            <p class="passport_desc_9"> г. БЕЛГОРОД </p>
+            
+            <p class="passport_desc_10"> БЕЛГОРОДСКАЯ ОБЛАСТЬ </p>
+
+            <img class ="my_photo" src="./images/марселька_фото.jpg">
+
+                <img class="passport_photo" src="./images/паспорт.jfif">
+            </div>
+
+            <div class="passport_btn_section">
+            <button class="passport_btn" id="changeLangBtn"> CHANGE LANGUAGE </button>
+            </div>
+      
+
+    <script>
+        
+const btn = document.getElementById('changeLangBtn');
+
+let issuing = document.querySelector('.passport_desc_1');
+let date = document.querySelector('.passport_desc_2');
+let code = document.querySelector('.passport_desc_3');
+let surname = document.querySelector('.passport_desc_4');
+let name = document.querySelector('.passport_desc_5');
+let patronymic = document.querySelector('.passport_desc_6');
+let gender = document.querySelector('.passport_desc_7');
+let birthday = document.querySelector('.passport_desc_8');
+let city = document.querySelector('.passport_desc_9');
+let area = document.querySelector('.passport_desc_10');
+
+const eng = [
+  'THE MINISTRY OF INTERNAL AFFAIRS OF RUSSIA IN THE BELGOROD REGION',
+  '30.12.2020',
+  '310-005',
+  'KHVOSTOVA',
+  'SVETLANA',
+  'ROMANOVNA',
+  'F',
+  '04.12.2006',
+  'BELGOROD',
+  'BELGOROD REGION'
+];
+
+const rus = [
+  'УМВД РОССИИ ПО БЕЛГОРОДСКОЙ ОБЛАСТИ',
+  '30.12.2020',
+  '310-005',
+  'ХВОСТОВА',
+  'СВЕТЛАНА',
+  'РОМАНОВНА',
+  'ЖЕН.',
+  '04.12.2006',
+  'г. БЕЛГОРОД',
+  'БЕЛГОРОДСКАЯ ОБЛАСТЬ'
+];
+
+let isRus = true;
+
+btn.addEventListener('click', () => {
+  if (isRus) {
+    issuing.textContent = eng[0];
+    date.textContent = eng[1];
+    code.textContent = eng[2];
+    surname.textContent = eng[3];
+    name.textContent = eng[4];
+    patronymic.textContent = eng[5];
+    gender.textContent = eng[6];
+    birthday.textContent = eng[7];
+    city.textContent = eng[8];
+    area.textContent = eng[9];
+    btn.textContent = 'Вернуться к русской версии';
+  } else {
+    issuing.textContent = rus[0];
+    date.textContent = rus[1];
+    code.textContent = rus[2];
+    surname.textContent = rus[3];
+    name.textContent = rus[4];
+    patronymic.textContent = rus[5];
+    gender.textContent = rus[6];
+    birthday.textContent = rus[7];
+    city.textContent = rus[8];
+    area.textContent = rus[9];
+    btn.textContent = 'CHANGE LANGUAGE';
+  }
+  isRus = !isRus;
+});
+
+    </script>
+
+   <h4> СЧИТЫВАЕМ ИНФОРМАЦИЮ ИЗ DOM </h4>
+   <img class="dom_photo" src="./images/dom.png">
+
+     </section>
+    </main>
+</body>
+    
+
+   
