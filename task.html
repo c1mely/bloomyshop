@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акции</title>
+    <link rel="stylesheet" href="сайтик.css">
+</head>
+
+<!-- Шапка -->
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="task.html"><img src="./images/logo.png" alt="Логотип"  class="header_logo"> </a> 
+
+        <nav class="header_nav">
+            <ul class="header_list">
+                <li><a href="index.html">ГЛАВНАЯ</a></li>
+                <li><a href="catalog.html">КАТАЛОГ</a></li>
+                <li><a class="active" href="sales.html">АКЦИИ</a></li>
+                <li><a href="partners.html">ПАРТНЕРЫ</a></li>
+                <li><a href="https://yandex.ru/maps/2/saint-petersburg/house/nevskiy_prospekt_85/Z0kYdQFiSUMPQFtjfXVycX1nYg==/?ll=30.362069%2C59.930147&z=16" target="_blank"> РАСПОЛОЖЕНИЕ</a></li>
+                <li><a href="sales.html#shop_information">О НАС</a></li>
+                <li><a href="order.html">ЗАКАЗ</a></li>
+                <li><a href="account.html"> АККАУНТ </a></li>
+            </ul>
+        </nav>
+        <a href="information.html"><img src="./images/mini_info.png" title="краткая информация" alt ="information" class ="header_information"></a>
+        </div>
+    </header>
+
+<!-- Основная часть  -->
+
+<section class="task_section">
+  <h3> РЕШЕНИЕ АЛГОРИТМИЧЕСКОЙ ЗАДАЧИ </h3>
+
+  <p class="task_desc">Определение значения функции Z = X, при X > Y, Z = ln(X + Y ) в противном случае.</p>
+
+  <form id="calc_form" target="_blank">
+
+    <label for="inputX">Введите X: </label>
+    <input type="number" name="inputX" id="inputX" required />
+    
+    <label for="inputY">Введите Y: </label>
+    <input type="number" name="inputY" id="inputY" required />
+    
+    <button class="btn_task" type="button" onclick="calculate_and_show()">Вычислить </button>
+    
+    <button class="btn_task" type="submit" onclick="return send_data()">Отправить данные </button>
+  </form>
+
+  <div id="output"></div>
+
+  <script>
+
+    function calculateZ(x, y) {
+      if(x > y) {
+        return Math.pow(x, y);
+      } else {
+        if (x + y <= 0) {
+          alert('Сумма X и Y должна быть положительной для вычисления логарифма');
+          return null;
+        }
+        return Math.log(x + y);
+      }
+    }
+
+    function calculate_and_show() {
+      const x = parseFloat(document.getElementById('inputX').value);
+      const y = parseFloat(document.getElementById('inputY').value);
+      const result = calculateZ(x, y);
+      if (result === null) return;
+      document.getElementById('output').textContent = 'Z = ' + result.toFixed(6);
+    }
+
+    function send_data() {
+     
+      window.open('https://www.google.com/search', '_blank');
+      return false; // отменить стандартную отправку формы
+    }
+  </script>
+</section>
